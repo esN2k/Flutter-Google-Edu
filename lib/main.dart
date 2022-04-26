@@ -1,13 +1,20 @@
-// ignore_for_file: avoid_print
+import 'package:flutter/material.dart';
 
 void main() {
-  print('Hoş Geldiniz!');
+  runApp(const MyApp());
+}
 
-  const mesajSayisi = 1;
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
-  const mi = 0;
-
-  while (mi < mesajSayisi) {}
-
-  print('$mesajSayisi adet okunmamış mesajınız var');
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.teal,
+        title: const Text('Flutter'),
+      ),
+    ));
+  }
 }
